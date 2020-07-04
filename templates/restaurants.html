@@ -1,0 +1,9 @@
+<br><hr><br>
+{% for restaurant in restaurants %}
+<a href="{% url 'review:restaurantdishes' restaurant.id %}">{{ restaurant}}</a>
+<h4>{{restaurant.about}}</h4>
+<h1>{{restaurant}}</h1>
+<h5>{{restaurant.created}}</h5>
+<img src="{{restaurant.image.url}}">
+{% endfor %}
+<br><hr><br>

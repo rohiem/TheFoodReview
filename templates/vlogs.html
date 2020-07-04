@@ -1,0 +1,7 @@
+{% load embed_video_tags %}
+
+{% for vlog in vlogs %}
+{{vlog}}
+{% video vlog.video 'medium' %}<br>
+
+{% endfor %}

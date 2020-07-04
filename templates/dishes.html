@@ -1,0 +1,19 @@
+
+<h1>{{restauarnt.name}}</h1><br>
+<img src="{{restauarnt.menu.url}}" alt=""><br>
+<h1>{{restauarnt.about}}</h1><br>
+{{restauarnt.created}}<br>
+<h1>restauarnt rating : {{restauarnt.rating}}</h1><br>
+
+
+{% for d in dish %}
+<br><hr><br>
+<h1>{{d}}</h1><br>
+<h1>{{d.review}}</h1><br>
+<h1>{{d.created }}</h1><br>
+<h1>rating: {{d.rating }}</h1><br>
+
+<img src="{{d.image.url}}" alt=""><br>
+<br><hr><br>
+
+{% endfor %}

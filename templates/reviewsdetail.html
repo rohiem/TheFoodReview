@@ -1,0 +1,12 @@
+<br>
+<h1>{{reviews}}<br><hr></h1>
+<h1>Rating: {{reviews.rating}}</h1><br><hr>
+<h6>{{reviews.created}}</h6><br><hr>
+<h5>{{reviews.reviewtext}}</h5><br><hr>
+
+<br>
+<hr>
+{% for i in img %}
+<img src="{{i.image.url}}" style="height:380px;">
+
+{% endfor %}

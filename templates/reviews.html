@@ -1,0 +1,4 @@
+{% for review in reviews %}
+<a href="{% url 'review:reviewdetail' review.id %}">{{ review }}</a>
+
+{% endfor %}

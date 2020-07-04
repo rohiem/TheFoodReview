@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+{% load static %}
+     <div class="row wow fadeIn" style="background-image: url({% static 'img/bossboss.jpg' %});" data-wow-delay="0.2s">
+      <div class="col-md-12">
+         <div class="jumbotron" style="background:none">
+          <h2 class="h2-responsive" style="color:white;">Material Design for Bootstrap</h2>
+          <br>
+          <p style="color:#3B295A;">Powerful and free Material Design UI KIT</p>
+          <hr>
+          <p style="color:white;">Register for free and get access to amazing framework and beautiful components</p>
+          <a target="_blank" href="https://mdbootstrap.com/getting-started/" class="btn btn-outline-unique" rel="nofollow">Download
+            <i class="fas fa-download right"></i></a>
+          <a target="_blank" href="https://mdbootstrap.com/material-design-for-bootstrap/" class="btn btn-unique btn-ptc"
+            rel="nofollow">Learn more <i class="fas fa-book right"></i></a>
+        </div>
+         </div>
+</div>    <hr class="extra-margins">            
+
+<h1>PINNED</h1><hr><br>
+<div class="container">
+  <div class="row">
+{% for pin in pinned %}
+
+      <!--First columnn-->
+      <div class="col-lg-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+          <!--Card image-->
+          <img class="img-fluid" src="{{pin.image.url}}"alt="Card image cap" style="width:350px;height:233px;">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{pin}}</h4>
+            <!--Text-->
+            <p class="card-text">{{pin.desc}}</p>
+       
+             <!-- <a href="{% url 'review:recipedetail' pin.id %}" class="btn btn-unique">Read more</a>-->
+          </div>
+
+        </div>
+
+      </div>{% endfor %}
+</div>
+    </div>  <!--First columnn-->
+<hr><h1>RESTAURANTS  & MENUS</h1><hr><div class="container">
+  <div class="row">
+{% for restaurant in restaurants %}
+
+      <!--First columnn-->
+      <div class="col-lg-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+          <!--Card image-->
+          <img class="img-fluid" src="{{restaurant.image.url}}"alt="Card image cap" style="width:350px;height:233px;">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{ restaurant }}</h4>
+            <!--Text-->
+            <p class="card-text">{{restaurant.desc}}</p>
+            <a href="{% url 'review:restaurantdishes' restaurant.id %}" class="btn btn-unique">Read more</a>
+          </div>
+
+        </div>
+        <!--/.Card-->
+      </div>{% endfor %}
+</div>
+    </div>  <!--First columnn-->
+      <h1>REVIEWS</h1><hr><br>
+<div class="container">
+  <div class="row">
+{% for review in reviews %}
+
+      <!--First columnn-->
+      <div class="col-lg-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+          <!--Card image-->
+          <img class="img-fluid" src="{{review.image.url}}"alt="Card image cap" style="width:350px;height:233px;">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{review}}</h4>
+            <!--Text-->
+            <p class="card-text">{{review.desc}}</p>
+            <a href="{% url 'review:reviewdetail' review.id %}" class="btn btn-unique">Read more</a>
+          </div>
+
+        </div>
+        <!--/.Card-->
+      </div>{% endfor %}
+</div>
+    </div>  <!--First columnn-->
+
+
+    <!--First columnn-->
+      <h1>VIDEOS</h1><hr><br>
+<div class="container">
+  <div class="row">
+{% for video in videos %}
+
+      <!--First columnn-->
+      <div class="col-lg-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+          <!--Card image-->
+          <img class="img-fluid" src="{{video.image.url}}"alt="Card image cap" style="width:350px;height:233px;">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{video}}</h4>
+            <!--Text-->
+            <p class="card-text">{{video.desc}}</p>
+            <a href="{% url 'review:videodetail' video.id %}" class="btn btn-unique">Read more</a>
+          </div>
+
+        </div>
+        <!--/.Card-->
+      </div>{% endfor %}
+</div>
+    </div>  <!--First columnn-->
+
+ <!--First columnn-->
+      <h1>VLOGS</h1><hr><br>
+<div class="container">
+  <div class="row">
+{% for vlog in vlogs %}
+
+      <!--First columnn-->
+      <div class="col-lg-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+          <!--Card image-->
+          <img class="img-fluid" src="{{vlog.image.url}}"alt="Card image cap" style="width:350px;height:233px;">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{vlog}}</h4>
+            <!--Text-->
+            <p class="card-text">{{vlog.desc}}</p>
+            <a href="{% url 'review:vlogdetail' vlog.id %}" class="btn btn-unique">Read more</a>
+          </div>
+
+        </div>
+        <!--/.Card-->
+      </div>{% endfor %}
+</div>
+    </div>  <!--First columnn-->
+
+ <!--First columnn-->
+      <h1>BLOGS</h1><hr><br>
+<div class="container">
+  <div class="row">
+{% for blog in blogs %}
+
+      <!--First columnn-->
+      <div class="col-lg-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+          <!--Card image-->
+          <img class="img-fluid" src="{{blog.image.url}}"alt="Card image cap" style="width:350px;height:233px;">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{blog}}</h4>
+            <!--Text-->
+            <p class="card-text">{{blog.desc}}</p>
+            <a href="{% url 'review:blogdetail' blog.id %}" class="btn btn-unique">Read more</a>
+          </div>
+
+        </div>
+        <!--/.Card-->
+      </div>{% endfor %}
+</div>
+    </div>  <!--First columnn-->
+<h1>RECIPES</h1><hr><br>
+<div class="container">
+  <div class="row">
+{% for recipe in recipes %}
+
+      <!--First columnn-->
+      <div class="col-lg-4">
+        <!--Card-->
+        <div class="card wow fadeIn" data-wow-delay="0.2s">
+
+          <!--Card image-->
+          <img class="img-fluid" src="{{recipe.image.url}}"alt="Card image cap" style="width:350px;height:233px;">
+
+          <!--Card content-->
+          <div class="card-body">
+            <!--Title-->
+            <h4 class="card-title">{{recipe}}</h4>
+            <!--Text-->
+            <p class="card-text">{{recipe.desc}}</p>
+            <a href="{% url 'review:recipedetail' recipe.id %}" class="btn btn-unique">Read more</a>
+          </div>
+
+        </div>
+        <!--/.Card-->
+      </div>{% endfor %}
+</div>
+    </div>  <!--First columnn-->
+{% endblock content %}

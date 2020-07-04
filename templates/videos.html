@@ -1,0 +1,15 @@
+{% comment %}
+{% for video in videos %}
+<iframe width="560" height="315" src="{{video.video}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+{% endfor %}
+{% endcomment %}
+{% load embed_video_tags %}
+<br>
+{% for video in videos %}
+<h1>{{video.name}}
+</h1>
+<img src="{{video.image.url}}" alt="">
+{% video video.video 'small' %}<br>
+<hr>
+{% endfor %}
